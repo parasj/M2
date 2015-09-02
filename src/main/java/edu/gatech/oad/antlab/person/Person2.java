@@ -1,4 +1,4 @@
-//package edu.gatech.oad.antlab.person;
+package edu.gatech.oad.antlab.person;
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.Arrays;
