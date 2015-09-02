@@ -30,7 +30,7 @@ public class Person5 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  String letters[] = letters[input.length()];
+	  String[] letters = new String[input.length()];
 	  int counter = 0;
 	  while (counter < input.length()) {
 	  	letters[counter] = Character.toString(input.charAt(counter));
@@ -39,10 +39,10 @@ public class Person5 {
 	  String newInput = "";
 	  int start = 2;
 	  while (start < input.length()) {
-	  	String newInput = newInput + letters[start];
+	  	newInput = newInput + letters[start];
 	  	start++;
 	  }
-	  String newInput = newInput + letters[0] + letters[1];
+	  newInput = newInput + letters[0] + letters[1];
 	  return newInput;
 	}
 	
