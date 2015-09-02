@@ -1,7 +1,5 @@
-//package edu.gatech.oad.antlab.person;
+package edu.gatech.oad.antlab.person;
 import java.util.Random;
-import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  *  A simple class for person 2
@@ -37,20 +35,17 @@ public class Person2 {
 	  if (input == null) {
 	  	return null;
 	  }
-	  ArrayList<Character> tempArray = new ArrayList<Character>();
-	  for (char c : input.toCharArray()) {
-		tempArray.add(c);
-	  }
-	  char[] finalArray = new char[tempArray.size()];
+	  ArrayList<char> tempArray = new ArrayList<char>(Arrays.asList(input.toCharArray()));
+	  char[] finalArray = char[tempArray.size()];
 	  int counter = 0;
 	  Random rand = new Random();
-	  while(tempArray.size() != 0) {
-    		int randomNum = rand.nextInt(tempArray.size());
+	  for(tempArray.size() != 0) {
+    		int randomNum = rand.nextInt(tempArray.length + 1);
     		finalArray[counter] = tempArray.get(randomNum);
     		tempArray.remove(randomNum);
     		counter++;
 	  }
-	  return new String(finalArray);
+	  return String.toString(finalArray);
 	}
 	/**
 	 * Return a string rep of this object
@@ -63,11 +58,4 @@ public class Person2 {
 	public String toString(String input) {
 	  return name + calc(input);
 	}
-
-	// public static void main(String[] args) {
-	//     Person2 me = new Person2("Rishav");
-	//     for (int counter = 0; counter < 15; counter++ ) {
-	//     	System.out.println(me.toString("1234567"));
-	//     }
-	// }
 }
