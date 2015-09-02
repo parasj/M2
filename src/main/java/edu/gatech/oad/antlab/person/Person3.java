@@ -42,6 +42,9 @@ public class Person3 {
 	 * @return the reversed string
 	 */
 	private String calc(String input) {
+		if (input == null) {
+			return null;
+		}
 	  	String input1 = "";
 	  	int length = input.length();
       	for (int i = length - 1 ; i >= 0 ; i-- ) {

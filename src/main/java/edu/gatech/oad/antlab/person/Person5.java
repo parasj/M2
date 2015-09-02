@@ -30,8 +30,20 @@ public class Person5 {
 	 * @return the modified string
 	 */
 	private String calc(String input) {
-	  //Person 5 put your implementation here
-	  return null;
+	  String[] letters = new String[input.length()];
+	  int counter = 0;
+	  while (counter < input.length()) {
+	  	letters[counter] = Character.toString(input.charAt(counter));
+	  	counter++;
+	  }
+	  String newInput = "";
+	  int start = 2;
+	  while (start < input.length()) {
+	  	newInput = newInput + letters[start];
+	  	start++;
+	  }
+	  newInput = newInput + letters[0] + letters[1];
+	  return newInput;
 	}
 	
 	/**
