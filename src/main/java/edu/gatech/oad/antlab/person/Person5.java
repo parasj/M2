@@ -31,19 +31,19 @@ public class Person5 {
 	 */
 	private String calc(String input) {
 	  String[] letters = new String[input.length()];
-	  int counter = 0;
-	  while (counter < input.length()) {
-	  	letters[counter] = Character.toString(input.charAt(counter));
-	  	counter++;
-	  }
-	  String newInput = "";
-	  int start = 2;
-	  while (start < input.length()) {
-	  	newInput = newInput + letters[start];
-	  	start++;
-	  }
-	  newInput = newInput + letters[0] + letters[1];
-	  return newInput;
+	    int counter = 0;
+	    while (counter < input.length()) {
+	        letters[counter] = Character.toString(input.charAt(counter));
+	        counter++;
+	    }
+	    String newInput = "";
+	    int start = 2;
+	    while (start < input.length()) {
+	        newInput = newInput + letters[start];
+	        start++;
+	    }
+	    newInput = newInput + letters[0] + letters[1];
+	    return newInput;
 	}
 	
 	/**
@@ -55,7 +55,7 @@ public class Person5 {
 	 *         object
 	 */
 	public String toString(String input) {
-	  return name + calc(input);
+	    return name + calc(input);
 	}
 
 }
