@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+defaultTasks 'jar'
+
+dependencies {
+    compile files("lib/resources.jar")
+}
+
+javadoc {
+    source = sourceSets.main.allJava
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Paras Jain - pjain67',
+                   'Implementation-Version': '1.0',
+                   'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                   'Class-Path': '../../lib/resources.jar'
+    }
+}
