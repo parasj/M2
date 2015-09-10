@@ -5,7 +5,6 @@ version = '1.0'
 
 dependencies {
     compile files("lib/resources.jar")
-    testCompile group: 'junit', name: 'junit', version: '4.+'
 }
 
 javadoc {
@@ -16,7 +15,7 @@ jar {
     manifest {
         attributes 'Implementation-Title': 'Siddarth Senthilkumar - ssenthilkumar3',
                    'Implementation-Version': version,
-                   'Main-Class': 'edu.gatech.oad.antlab.pkg1.AntLabMain',
+                   'Main-Class': 'edu/gatech/oad/antlab/pkg1/AntLabMain',
                    'Class-Path': '../../lib/resources.jar'
     }
 }
