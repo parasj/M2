@@ -29,11 +29,12 @@ public class Person4 {
      * @param input the string to be modified
      * @return the modified string
      */
-    private String calc(String input) {
+    private static String calc(String input) {
         String oneMore = "";
         for (int i = 0; i < input.length(); i++) {
-            char current = input.charAt(i);
-            oneMore += current + 1;
+            int current = input.charAt(i);
+            current += 1;
+            oneMore += (char) current;
         }
       return oneMore;
     }
